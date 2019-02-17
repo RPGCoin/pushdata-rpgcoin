@@ -1,0 +1,49 @@
+{
+  "name": "pushdata-rpgcoin",
+  "version": "1.0.1",
+  "description": "encode/decode value as rpgcoin OP_PUSHDATA integer",
+  "keywords": [
+    "push",
+    "encode",
+    "decode",
+    "abstract-encoding",
+    "OP_0",
+    "OP_1",
+    "OP_PUSHDATA1",
+    "OP_PUSHDATA2",
+    "OP_PUSHDATA4",
+    "pushdata-rpgcoin",
+    "rpgcoinjs-lib",
+    "rpgcoin",
+    "cryptocurrency"
+  ],
+  "homepage": "https://github.com/RPGCoin/pushdata-rpgcoin",
+  "bugs": {
+    "url": "https://github.com/RPGCoin/pushdata-rpgcoin/issues"
+  },
+  "license": "MIT",
+  "author": "silence <silence@rpgcoin.gg>",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RPGCoin/pushdata-rpgcoin.git"
+  },
+  "scripts": {
+    "prepare": "npm run test",
+    "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
+    "lint": "standard --fix",
+    "test": "npm run lint && npm run unit",
+    "unit": "tape test/*.js"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0",
+    "standard": "*",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "rpgcoin-ops": "^1.0.0"
+  }
+}
